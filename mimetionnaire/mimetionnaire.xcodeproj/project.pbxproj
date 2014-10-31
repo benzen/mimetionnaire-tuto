@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090675181A03DF940064F66A /* ListerMimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090675171A03DF940064F66A /* ListerMimeViewController.swift */; };
 		0976EBBC19FAB19600F91931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976EBBB19FAB19600F91931 /* AppDelegate.swift */; };
-		0976EBBE19FAB19600F91931 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976EBBD19FAB19600F91931 /* ViewController.swift */; };
 		0976EBC119FAB19600F91931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0976EBBF19FAB19600F91931 /* Main.storyboard */; };
 		0976EBC319FAB19600F91931 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0976EBC219FAB19600F91931 /* Images.xcassets */; };
 		0976EBC619FAB19600F91931 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0976EBC419FAB19600F91931 /* LaunchScreen.xib */; };
 		0976EBD219FAB19600F91931 /* mimetionnaireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976EBD119FAB19600F91931 /* mimetionnaireTests.swift */; };
+		0976EBDC19FAE5FC00F91931 /* AjouterMimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0976EBDB19FAE5FC00F91931 /* AjouterMimeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +27,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		090675171A03DF940064F66A /* ListerMimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListerMimeViewController.swift; sourceTree = "<group>"; };
 		0976EBB619FAB19600F91931 /* mimetionnaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mimetionnaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0976EBBA19FAB19600F91931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0976EBBB19FAB19600F91931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0976EBBD19FAB19600F91931 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0976EBC019FAB19600F91931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0976EBC219FAB19600F91931 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0976EBC519FAB19600F91931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		0976EBCB19FAB19600F91931 /* mimetionnaireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mimetionnaireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0976EBD019FAB19600F91931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0976EBD119FAB19600F91931 /* mimetionnaireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mimetionnaireTests.swift; sourceTree = "<group>"; };
+		0976EBDB19FAE5FC00F91931 /* AjouterMimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AjouterMimeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +79,9 @@
 		0976EBB819FAB19600F91931 /* mimetionnaire */ = {
 			isa = PBXGroup;
 			children = (
+				0976EBDB19FAE5FC00F91931 /* AjouterMimeViewController.swift */,
 				0976EBBB19FAB19600F91931 /* AppDelegate.swift */,
-				0976EBBD19FAB19600F91931 /* ViewController.swift */,
+				090675171A03DF940064F66A /* ListerMimeViewController.swift */,
 				0976EBBF19FAB19600F91931 /* Main.storyboard */,
 				0976EBC219FAB19600F91931 /* Images.xcassets */,
 				0976EBC419FAB19600F91931 /* LaunchScreen.xib */,
@@ -212,8 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0976EBBE19FAB19600F91931 /* ViewController.swift in Sources */,
+				0976EBDC19FAE5FC00F91931 /* AjouterMimeViewController.swift in Sources */,
 				0976EBBC19FAB19600F91931 /* AppDelegate.swift in Sources */,
+				090675181A03DF940064F66A /* ListerMimeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +409,7 @@
 				0976EBD719FAB19600F91931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0976EBD819FAB19600F91931 /* Build configuration list for PBXNativeTarget "mimetionnaireTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				0976EBDA19FAB19600F91931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
