@@ -96,14 +96,14 @@
 			isa = PBXGroup;
 			children = (
 				0976EBDB19FAE5FC00F91931 /* AjouterMimeViewController.swift */,
-				098937231A05099A00F28E90 /* Bridging-Header.h */,
+				090675171A03DF940064F66A /* ListerMimeViewController.swift */,
 				09C6DF251A03ECD300651D2F /* MimeModel.swift */,
 				09C6DF271A03EE0C00651D2F /* MimeStore.swift */,
+				0976EBBF19FAB19600F91931 /* Main.storyboard */,
+				098937231A05099A00F28E90 /* Bridging-Header.h */,
 				0989371C1A0506F000F28E90 /* SQLiteDB.swift */,
 				0989371D1A0506F000F28E90 /* String-Extras.swift */,
 				0976EBBB19FAB19600F91931 /* AppDelegate.swift */,
-				090675171A03DF940064F66A /* ListerMimeViewController.swift */,
-				0976EBBF19FAB19600F91931 /* Main.storyboard */,
 				0976EBC219FAB19600F91931 /* Images.xcassets */,
 				0976EBC419FAB19600F91931 /* LaunchScreen.xib */,
 				0976EBB919FAB19600F91931 /* Supporting Files */,

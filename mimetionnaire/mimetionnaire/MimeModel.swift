@@ -17,7 +17,6 @@ class MimeModel{
     init(nom: String, videoUrl: String){
         self.nom = nom
         self.videoUrl = videoUrl
-
     }
     
 }

@@ -40,6 +40,7 @@ class AjouterMimeViewController: UIViewController, UIImagePickerControllerDelega
     @IBAction
     func onTextChange(){
         model.nom = nomField.text
+        println("nouveau model \(model.nom)")
     }
     
     @IBAction
