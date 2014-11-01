@@ -70,6 +70,9 @@
                                 <rect key="frame" x="110" y="136" width="183" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onTextChange" destination="GWc-cA-XYf" eventType="valueChanged" id="cka-aR-7MN"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4c-4D-Jhb">
                                 <rect key="frame" x="82" y="191" width="157" height="30"/>
@@ -85,11 +88,17 @@
                                 <state key="normal" title="Ajouter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ajouterMime" destination="GWc-cA-XYf" eventType="touchUpInside" id="CxZ-Zd-Qi2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="YyI-zf-F8s"/>
+                    <connections>
+                        <outlet property="nomField" destination="EAB-g9-nLT" id="pst-NT-wJd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qJ-nR-rCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

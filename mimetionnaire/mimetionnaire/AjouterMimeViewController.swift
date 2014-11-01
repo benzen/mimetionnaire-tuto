@@ -11,7 +11,14 @@ import UIKit
 import MobileCoreServices
 
 class AjouterMimeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    let model: MimeModel =  MimeModel()
+    let store: MimeStore = MimeStore()
+    
+    @IBOutlet
+    var nomField: UITextField!
 
+    
     @IBAction
     func selectVideo(){
         var ipController = UIImagePickerController()
@@ -24,11 +31,21 @@ class AjouterMimeViewController: UIViewController, UIImagePickerControllerDelega
         
     }
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: NSDictionary!){
-        println("got it")
+
         var url = info.objectForKey(UIImagePickerControllerReferenceURL) as NSURL
-//        model.videoUrl = url.absoluteString!
-        
+        model.videoUrl = url.absoluteString!
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction
+    func onTextChange(){
+        model.nom = nomField.text
+    }
+    
+    @IBAction
+    func ajouterMime(){
+        store.addMime(model)
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
 
     
