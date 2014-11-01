@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
+
 
 class ListerMimeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate  {
 
@@ -49,6 +52,24 @@ class ListerMimeViewController: UIViewController, UITableViewDelegate, UITableVi
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
         self.tableView.reloadData()
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        self.performSegueWithIdentifier("playVideo", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        if (segue.identifier == "playVideo") {
+            let indexPath = tableView?.indexPathForSelectedRow()
+            let model = self.store.listMime(searchBar?.text)[indexPath!.row] as MimeModel
+            let url = NSURL(string: model.videoUrl)
+            if let subVC = segue.destinationViewController as? AVPlayerViewController {
+                subVC.player = AVPlayer(URL: url)
+                subVC.player.play()
+            }
+        }
+    }
+
 
 
 }
