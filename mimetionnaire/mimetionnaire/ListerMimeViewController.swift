@@ -8,10 +8,13 @@
 
 import UIKit
 
-class ListerMimeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class ListerMimeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate  {
 
     @IBOutlet
     var tableView: UITableView!
+    
+    @IBOutlet
+    var searchBar: UISearchBar!
     
     let store = MimeStore()
 
@@ -21,6 +24,7 @@ class ListerMimeViewController: UIViewController, UITableViewDelegate, UITableVi
         self.tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.searchBar.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,14 +36,18 @@ class ListerMimeViewController: UIViewController, UITableViewDelegate, UITableVi
         cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
             var cell = self.tableView!.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
             
-            let model = self.store.listMime("")[indexPath.row]
+            let model = self.store.listMime(searchBar.text)[indexPath.row]
             cell.textLabel.text = model.nom
             return cell
 
     }
     func tableView( tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int{
-            return store.listMime("").count
+            return store.listMime(searchBar.text).count
+    }
+
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        self.tableView.reloadData()
     }
 
 
